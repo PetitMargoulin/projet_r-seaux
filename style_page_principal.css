@@ -1,0 +1,48 @@
+header
+{
+	width: 100vw;
+	height: 300px;
+	display: flex;
+	justify-content: space-between;
+	background-image: url(images/banniere_1920_v1.png);
+
+}
+
+.header
+{
+	width: 30vw;
+	height: inherit;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.header li
+{
+	font-family: Arial;
+	padding-bottom: 11em;
+}
+
+.header li a:link
+{	
+	color: white;
+}
+
+.header li a:visited
+{	
+	color: white;
+} 
+
+.header li a:hover
+{	
+	text-decoration: underline;
+}
+
+#Nom_du_site
+{
+	display: block;
+	margin: 0 auto ;
+
+}
+
