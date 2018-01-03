@@ -1,0 +1,102 @@
+
+body
+{
+	background-image: url(images/fond_gris.png);
+	background-repeat:no-repeat;
+	background-position:50% 98%;
+}
+
+
+
+p
+{
+
+    font-size: 28px;
+	margin-left: 400px;
+	margin-right: 400px;
+	margin-bottom: 100px;
+	margin-top: 100px;
+	text-align: justify;
+
+}
+
+p.blanc
+{
+	color: #FFFFFF;
+}
+
+h1
+{
+	font-size: 60px;
+	margin-left: 400px;
+	margin-right: 400px;
+	margin-bottom: 100px;
+	margin-top: 100px;
+	color: #b63e3c;
+}
+
+img
+{
+	margin-bottom:80px;
+}
+
+.floatright
+{
+	float: right;
+	margin-left:40px;
+}
+
+.floatleft
+{
+	float: left;
+	margin-right:40px;
+}
+
+.dessous
+{
+	clear: both;
+}
+
+ul#vertical li
+{
+	display : inline;
+	padding : 0 4em;
+}
+
+
+#menu
+{
+padding: 0;
+margin: 0;
+text-align:center;
+	width:1920px;
+	height:300px;
+	margin-left:auto;
+	margin-right:auto;
+	background-image: url(banniere_1920_v1.png);
+
+
+
+}
+
+#menu li
+
+{
+	display:inline;
+	list-style:none;
+
+	
+	
+	
+	}
+	
+	#menu a
+{
+	
+	display:inline;
+	margin: 0 100px;
+	color:#FFFFFF;
+	font-size:50px;
+	text-decoration:none;
+	
+}
