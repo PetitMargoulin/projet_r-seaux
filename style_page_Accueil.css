@@ -1,0 +1,74 @@
+#Nom_du_site
+{
+	display: block;
+	margin: 0 auto ;
+	margin-top: 15em;
+
+}
+
+a:link 
+{
+	color: white;
+}
+
+a:visited
+{
+	color: white;
+}
+
+section
+{
+	margin: 0 auto;
+	margin-top: 10em;
+	width: 70vw;
+	height: auto;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+section a
+{
+	height: 300px;
+	margin-bottom: 2em;
+}
+
+article p 
+{
+	background-color: rgba(128,128,128,0.8);
+	width: 150px;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items:  center;
+	justify-content: center;
+}
+
+article div 
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+.tiles
+{
+	border: 4px solid black;
+	width: 400px;
+	background-size: 400px 400px;
+	background-repeat: no-repeat;
+	display: block;
+	margin: 0 auto;
+	display: block;
+}
+
+.impression3D
+{
+	background-image: url(images/article1_2.jpg);
+}
+
+.Undertale
+{
+	background-image: url(images/Undertale1.jpg);
+}
+

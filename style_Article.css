@@ -1,0 +1,71 @@
+article 
+{
+	margin: 0 auto;
+	height: auto;
+	display: flex;
+	justify-content: space-around;
+	margin-left: 20em;
+	margin-right: 20em;
+}
+
+.text
+{
+	width: 18em;
+	height: auto;
+	background-color: white;
+
+}
+
+.imageArticle
+{
+	width: 400px;
+	height: 400px;
+	max-width:  400px
+	max-height: 537px;
+	margin-left: 2em;
+	margin-right: 2em;
+
+}
+
+p
+{
+    font-size: 28px;
+	text-align: justify;
+	
+}
+
+h1
+{
+	font-size: 60px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	color: #b63e3c;
+}
+
+.contact
+{
+	font-size: 40px;
+	display: flex;
+
+	justify-content: center;
+	text-align:center;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	color: #41474c;
+}
+
+#titreDeLarticle
+{
+	margin-top: 3em;
+	margin-bottom: 3em;
+}
+
+
+
+
+
+
+
