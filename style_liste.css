@@ -1,0 +1,96 @@
+p
+{
+    font-size: 28px;
+	text-align: justify;
+}
+
+
+a:link 
+{
+	color: white;
+}
+
+a:visited
+{
+	color: white;
+}
+
+section
+{
+	margin: 0 auto;
+	margin-top: 10em;
+	width: 70vw;
+	height: auto;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+section a
+{
+	height: 200px;
+	margin-bottom: 2em;
+}
+
+.titre
+{
+	background-image: url(images/trait_rouge.png);
+	
+	background-repeat: no-repeat;
+		
+	width: 600px;
+	height: 80px;
+	display: flex;
+	flex-direction: column;
+	align-items:  center;
+	justify-content: center;
+}
+
+article div 
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+.tiles
+{
+	width: 800px;
+	background-size: 800px 300px;
+	background-repeat: no-repeat;
+	display: block;
+	margin: 0 auto;
+	display: block;
+}
+
+.photo_impression3D
+{
+	background-image: url(images/img_liste_1.jpg);
+	
+}
+
+.photo_undertales
+{
+	background-image: url(images/img_liste_2.jpg);
+}
+
+.photo_virtual_reality
+{
+	background-image: url(images/img_liste_3.jpg);
+}
+
+.numero
+{
+	background-image: url(images/fleche_rouge.png);
+	background-repeat: no-repeat;
+	
+	margin-bottom: 3em;
+
+	width: 100px;
+	height: 55px;
+	display: flex;
+	flex-direction: column;
+	align-items:  center;
+	justify-content: center;
+}
+
