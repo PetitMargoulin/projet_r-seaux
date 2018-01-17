@@ -35,20 +35,52 @@ section a
 
 article p 
 {
-	background-color: rgba(128,128,128,0.8);
-	width: 150px;
+	background-color: rgba(0,0,0,0.4);
+	width: 200px;
 	height: 300px;
 	display: flex;
 	flex-direction: column;
 	align-items:  center;
 	justify-content: center;
+	font-size:20px;
+	font-weight:bold;
+	
+
 }
+
+article:hover p
+{
+	animation-duration: 1s;
+	animation-name: slidein;
+	
+	transition-timing-function: ease-out; 
+	background-color: rgba(0,0,0,0.8);
+    width:300px;
+	
+}
+
+@keyframes slidein
+{
+  from {
+	background-color: rgba(0,0,0,0.4);
+    width:200px;
+    
+  }
+  
+  to {
+	background-color: rgba(0,0,0,0.8);
+    width:300px;
+    
+  }
+}
+
 
 article div 
 {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
+
 }
 
 .tiles
