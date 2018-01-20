@@ -7,6 +7,15 @@
 		<link rel="stylesheet" href="style_Article.css" />
 		<link href="images/icone.png" rel="shortcut icon" type="image/png" />
 		<title>Impression 3D</title>
+		
+		<SCRIPT language="javascript">
+		function choixprop(form) {
+		if (form.choix[oui].checked) { alert("Vous avez choisi la proposition 1" };
+		if (form.choix[non].checked) { alert("Vous avez choisi la proposition 2" };
+		
+		}
+		</SCRIPT>
+		
 	</head>
 	
 <body>
@@ -15,7 +24,7 @@
 	<header>
 		<ul class="header">
 			<li><a href="Accueil.html">Accueil</a></li>
-			<li><a href="liste_des_articles.html">Articles</a></li>
+			<li><a href="liste.html">Articles</a></li>
 		</ul>
 
 		<img id="imageLogo" src="images/banniere_1920_v4.png"/>
@@ -27,7 +36,10 @@
 	</header>
 						<!--	<img src="banniere_1920_v1.png" alt="logo">    -->
 
-
+						
+						
+					
+	
 	<h1 id="titreDeLarticle">L'impression 3D</h1>
 	
 	<article>
@@ -94,6 +106,81 @@
 					Et oui ! Le plastique ça fond. Mais rassurer-vous, aujourd'hui l'impression 3D se développe et permet aussi d'imprimer de la poudre métallique, de la résine liquide, de la céramique..
 				</p>
 			</article>
+			
+
+			
+
+	<form> 
+		<fieldset id="popup">
+		
+			<img src="images/icone_100px.png" id="logopopup" alt="logo">
+			
+			<div id="titrepopup">
+				<legend id="changement">Avez vous aimé cet article ?</legend>
+			</div>
+			
+			<div class="contenupopup">
+				<input type="radio" id="Sioui" name="choix" value="oui">
+				<label for="Sioui">Oui</label>
+			</div>
+			
+			<div class="contenupopup">
+				<input type="radio" id="Sinon" name="choix" value="non">
+				<label for="Sinon">Non</label>
+			</div>
+			
+			<div class="envoie">
+				<button type="submit"onClick="choixprop(form3)">Ok</button>
+			</div>
+			
+		</fieldset>
+	</form>	
+
+		<pre id="log">
+		</pre>
+
+		<script>
+		
+			var form = document.querySelector("form");
+			var log = document.querySelector("#log");
+			var compteur = 0;
+		
+
+			form.addEventListener("submit", function(event)
+			{
+			
+			  var data = new FormData(form);
+			  var output = "";
+			  compteur = compteur + 1;
+			  for (const entry of data)
+			  {
+				output = entry[1];
+			  };
+			  
+			  if(output=='oui')
+				{
+					document.getElementById('changement').innerHTML = 'Juger vous que la qualité du site est correct ?';
+					log.innerText = 'question ' + compteur + ' = il à aimé l\'article';
+					if(compteur>1) { document.getElementById('popup').innerHTML = '<img src="images/icone_100px.png" id="logopopup" alt="logo"><div id="titrepopup">Merci pour votre visite !</div>';}
+					
+				}
+				else if(output=='non')
+				{
+					document.getElementById('popup').innerHTML = '<img src="images/icone_100px.png" id="logopopup" alt="logo"><div id="titrepopup">Merci pour votre visite !</div>';
+					//function attendre()
+					//{
+					//	var dispop= document.getElementById("popup");
+	
+	//					dispop.style.opacity = "0";
+		//			}
+			//		setTimeout(attendre, 2000);
+				}
+			  
+			  
+			  event.preventDefault();  // si l'évenement n'est pas traité, continue en ignorant
+			  
+			}, false);
+		</script>
 			
 	<footer>
 		
