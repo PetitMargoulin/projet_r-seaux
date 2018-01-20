@@ -75,4 +75,88 @@ h1
 		width: 90vw;
 		height: auto;
 	}
+
+
+}
+
+form
+{
+	width:1920;
+	height:500;
+}
+
+#popup
+{
+
+
+	width:100vw;
+	height:400px;
+	
+		font-size:20px;
+		font-weight:bold;
+	
+	display: flex;
+	flex-direction:column;
+	margin: 0 auto;
+	opacity:0.1;
+	text-align:center;
+	
+}
+
+#titrepopup 
+{
+		text-align:center;
+		margin-top:20px;
+		margin-bottom:10px;
+
+}
+
+#logopopup
+{
+		margin:0 auto;
+}
+
+
+.contenupopup
+{
+	text-align:center;
+	margin-top:20px;
+}
+.contenupopup:hover
+{
+	color: #b63e3c;
+}
+
+.envoie{
+	text-align:center;
+	margin-top:40px;
+	margin-left:110px;
+}
+
+.envoie:hover
+{
+	font-size:22px;
+}
+
+
+#popup:hover
+{
+	animation-duration: 2s;
+	animation-name: apparaitre;
+	opacity:1;
+
+	
+}
+
+@keyframes apparaitre
+{
+  from 
+  {
+	opacity:0.1;
+  }
+  
+  to 
+  {
+	opacity:1;
+  }
 }
