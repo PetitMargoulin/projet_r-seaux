@@ -139,13 +139,36 @@
 		<pre id="log">
 		</pre>
 
+		
+		
+		<div class="reponseq">
+			<div>
+				<div class="camembert">4%</div>
+				<span>Appréciation</span>
+			</div>
+			<div>
+				<div class="camembert">35%</div>
+				<span>Qualité</span>
+			</div>
+			<div>
+				<div class="camembert">40%</div>
+				<span>Contenu</span>
+			</div>
+			
+		</div>
+		
+
+		
 		<script>
 		
 			var form = document.querySelector("form");
 			var log = document.querySelector("#log");
-			var compteur = 0;
-		
+			
+			var compteur = 0; // compteur de questions
 
+		
+			// Quand on clique sur submit 
+			
 			form.addEventListener("submit", function(event)
 			{
 			
@@ -157,30 +180,43 @@
 				output = entry[1];
 			  };
 			  
-			  if(output=='oui')
+			  if(output=='oui')	// Si la réponse est oui
 				{
 					document.getElementById('changement').innerHTML = 'Juger vous que la qualité du site est correct ?';
 					log.innerText = 'question ' + compteur + ' = il à aimé l\'article';
 					if(compteur>1) { document.getElementById('popup').innerHTML = '<img src="images/icone_100px.png" id="logopopup" alt="logo"><div id="titrepopup">Merci pour votre visite !</div>';}
 					
 				}
-				else if(output=='non')
+				else if(output=='non')		// Si la réponse est non
 				{
 					document.getElementById('popup').innerHTML = '<img src="images/icone_100px.png" id="logopopup" alt="logo"><div id="titrepopup">Merci pour votre visite !</div>';
-					//function attendre()
-					//{
-					//	var dispop= document.getElementById("popup");
-	
-	//					dispop.style.opacity = "0";
-		//			}
-			//		setTimeout(attendre, 2000);
+
 				}
-			  
-			  
+
 			  event.preventDefault();  // si l'évenement n'est pas traité, continue en ignorant
 			  
 			}, false);
-		</script>
+			
+		
+			function moyenne(total, nombre)
+			{
+				var resultat = (nombre/total)*100;
+				return resultat;
+			}
+		
+			function valeurfromage(selecteur) // récupère la valeur en pourcentage
+			{
+				var elements = document.querySelectorAll(selecteur);
+				return Array.prototype.slice.call(elements);
+			}
+
+			valeurfromage('.camembert').forEach(function(camembert) // fait varier le camembert
+			{
+				var valeur = camembert.textContent;
+				camembert.style.animationDelay = '-' + parseFloat(valeur) + 's';
+			});
+
+	</script>
 			
 	<footer>
 		
