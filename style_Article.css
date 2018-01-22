@@ -167,3 +167,54 @@ form
 	opacity:1;
   }
 }
+
+span
+{
+	font-size:18px;
+	font-weight:bold;
+	margin-left:15px;
+}
+
+.reponseq
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:space-around;
+	margin: 10px 10vw;
+}
+
+.camembert 
+{
+	
+	position: relative;
+	width: 100px;
+	line-height: 100px;
+	border-radius: 50%;
+	background: #41474d;
+	background-image: linear-gradient(to right, transparent 50%, #b63e3c 0);
+	color: transparent;
+	text-align: center;
+	margin: 10px auto;
+}
+
+@keyframes rotation {
+	to { transform: rotate(.5turn); }
+}
+@keyframes changecolor
+{
+	50% { background: #b63e3c; }
+}   
+
+.camembert::before 
+{
+	content: '';
+	position: absolute;
+	top: 0; left: 50%;
+	width: 50%; height: 100%;
+	border-radius: 0 100% 100% 0 / 50%;
+	background-color: inherit;
+	transform-origin: left;
+	animation: rotation 50s linear infinite, changecolor 100s step-end infinite;
+	animation-play-state: paused;
+	animation-delay: inherit;
+}
