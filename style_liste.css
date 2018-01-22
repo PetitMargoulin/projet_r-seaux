@@ -26,6 +26,8 @@ section
 	flex-wrap: wrap;
 }
 
+
+
 section a
 {
 	height: 200px;
@@ -53,20 +55,51 @@ article div
 	justify-content: flex-end;
 }
 
+
+
+
 .tiles
 {
-	width: 800px;
+	width: 770px;
 	background-size: 800px 300px;
 	background-repeat: no-repeat;
-	display: block;
-	margin: 0 auto;
-	display: block;
+
+
+}
+
+.tiles:hover
+{
+	animation-duration: 1s;
+	animation-name: zoomin;
+	
+	width: 800px;
+	background-size: 810px 310px;
+	background-repeat: no-repeat;
+}
+
+@keyframes zoomin
+{
+  from {
+	width: 770px;
+	background-size: 800px 300px;
+	background-repeat: no-repeat;
+
+
+  }
+  
+  to {
+	width: 800px;
+	background-size: 810px 310px;
+	background-repeat: no-repeat;
+
+
+  }
 }
 
 .photo_impression3D
 {
 	background-image: url(images/img_liste_1.jpg);
-	
+
 }
 
 .photo_undertales
@@ -78,6 +111,8 @@ article div
 {
 	background-image: url(images/img_liste_3.jpg);
 }
+
+
 
 .numero
 {
