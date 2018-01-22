@@ -1,4 +1,0 @@
-page main (menu pricipal) avec accès au articles et un compteur visiteur 
--onglet pour acceder à la liste des articles 
--une page pour chaque article avec uns systemem de j'aime ou j'aime pas 
--un livre d'or
