@@ -54,7 +54,7 @@ print "<body>";
 	print "<\/div>";
 	print "<footer>";
 		print "<p>";
-			print	"Faculté des sciences et techniques<br>";
+			print"Faculté des sciences et techniques<br>";
 			print "87000 LIMOGES Cedex";
 		print "</p>";
 	print "</footer>";
