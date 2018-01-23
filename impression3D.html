@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="FR">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="reset.css" />
-		<link rel="stylesheet" href="style_haut_de_la_page.css">
+		<link rel="stylesheet" href="style_haut_de_la_page.css"/>
 		<link rel="stylesheet" href="style_Article.css" />
 		<link href="images/icone.png" rel="shortcut icon" type="image/png" />
 		<title>Impression 3D</title>
@@ -21,14 +21,14 @@
 			<li><a href="liste.html">Articles</a></li>
 		</ul>
 
-		<img id="imageLogo" src="images/banniere_1920_v4.png"/>
+		<img id="imageLogo" src="images/banniere_1920_v4.png" alt="Logo du site"/>
 		
 		<ul class= "header">
 			<li><a href="Contact.html">Contact</a></li>
 			<li><a href="cgi-bin/livre_dor.pl">Livre d'Or</a></li>
 		</ul>
 	</header>
-						<!--	<img src="banniere_1920_v1.png" alt="logo">    -->
+
 
 						
 						
@@ -36,7 +36,7 @@
 	
 	<h1 id="titreDeLarticle">L'impression 3D</h1>
 	
-	<article>
+	<div class="article">
 		
 			<p class= "text"> 
 			
@@ -47,7 +47,7 @@
 				Imaginez une superposition de couches qui formera au final un objet.
 					
 				C'est ce que l'imprimante 3D est capable de produire, des objets incroyablement sophistiqués
-				impossible à produire avant son arrivée, même en méthode d'usinage traditionnelle. </br>
+				impossible à produire avant son arrivée, même en méthode d'usinage traditionnelle. <br>
 					
 
 
@@ -56,11 +56,11 @@
 		
 			<img src="images/article1_2.jpg" class="imageArticle" alt="Voici une image d'impression 3D">
 		
-	</article>
+	</div>
 		
 	<h2>Mais alors, comment ça marche ?</h2>
 	
-			<article>
+			<div class="article">
 				<img src="images/article1_1.jpg" class="imageArticle" alt="Voici une image d'impression 3D">
 				<p class= "text">
 		
@@ -70,18 +70,18 @@
 					Mais celle ci utilise du plastique fondu à une température d'environ 200C à la place 
 					de l'encre. L'objet est imprimé sur un plateau qui se déplace en largeur
 					La tête d'impression se déplace en longueur et en hauteur ! Ainsi, l'objet peut s'imprimer
-					en 3 dimensions. </br>
+					en 3 dimensions. <br>
 					
 
 
 				</p>
 
-			</article>
+			</div>
 		
 		
 	<h2>Et l'objet, d'où vient-il ?</h2>
 	
-			<article>
+			<div class="article">
 				<p class="text">
 			
 					C'est en fait la partie 3D. 
@@ -90,16 +90,16 @@
 					adaptés. C'est une maquette de la forme que prendra votre objet une fois imprimé.
 			
 				</p>
-			</article>
+			</div>
 			
 	<h2> Si j'imprime une poêle en 3D, n'est ce pas inutile ?</h2>
 	
-			<article>
+			<div class="article">
 				<p class="text">
 			
 					Et oui ! Le plastique ça fond. Mais rassurer-vous, aujourd'hui l'impression 3D se développe et permet aussi d'imprimer de la poudre métallique, de la résine liquide, de la céramique..
 				</p>
-			</article>
+			</div>
 			
 
 			
@@ -110,7 +110,7 @@
 			<img src="images/icone_100px.png" id="logopopup" alt="logo">
 			
 			<div id="titrepopup">
-				<legend id="changement">Avez vous aimé cet article ?</legend>
+				Avez vous aimé cet article ?
 			</div>
 			
 			<div class="contenupopup">
@@ -124,7 +124,7 @@
 			</div>
 			
 			<div class="envoie">
-				<button type="submit"onClick="choixprop(form3)">Ok</button>
+				<button type="submit" onClick="choixprop(form3)">Ok</button>
 			</div>
 			
 		</fieldset>
@@ -176,8 +176,8 @@
 			  
 			  if(output=='oui')	// Si la réponse est oui
 				{
-					document.getElementById('changement').innerHTML = 'Juger vous que la qualité du site est correct ?';
-					log.innerText = 'question ' + compteur + ' = il à aimé l\'article';
+					document.getElementById('titrepopup').innerHTML = 'Juger vous que la qualité du site est correct ?';
+					
 					if(compteur>1) { document.getElementById('popup').innerHTML = '<img src="images/icone_100px.png" id="logopopup" alt="logo"><div id="titrepopup">Merci pour votre visite !</div>';}
 					
 				}
@@ -214,7 +214,7 @@
 			
 	<footer>
 		
-			Faculté des sciences et techniques</br>
+			Faculté des sciences et techniques<br>
 			87000 LIMOGES Cedex
 		
 	</footer>
