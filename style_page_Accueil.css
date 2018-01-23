@@ -16,7 +16,7 @@ a:visited
 	color: white;
 }
 
-section
+.lienSites
 {
 	margin: 0 auto;
 	margin-top: 10em;
@@ -27,13 +27,13 @@ section
 	flex-wrap: wrap;
 }
 
-section a
+.lienSites a
 {
 	height: 300px;
 	margin-bottom: 2em;
 }
 
-article p 
+.tiles p 
 {
 	background-color: rgba(0,0,0,0.4);
 	width: 200px;
@@ -49,7 +49,7 @@ article p
 
 }
 
-article:hover p
+.tiles:hover p
 {
 	
 	animation-name: slidein;
@@ -100,7 +100,7 @@ article:after p
 
 
 
-article div 
+.boite
 {
 	display: flex;
 	flex-direction: row;
