@@ -35,13 +35,15 @@ print "<body>";
 	print "<\/header>";
 
 	print "<p class='remerciement'>Merci d'avoir laissé un message!<\/p>";
-	print "<p class='remerciement'><a href='livre_dor.pl'>Retourner dans le livre d'or<\/a>";
+	print "<p class='remerciement'><a href='livre_dor.pl'>Retourner dans le livre d'or<\/a><\/p>";
 
 	print "<footer>";
 		print "<p>";
 			print	"Faculté des sciences et techniques<br>";
 			print "87000 LIMOGES Cedex";
-		print "</p>";
-	print "</footer>";
+		print "<\/p>";
+	print "<\/footer>";
 print "<\/body>";
+print "<\/html>";
+
 exit;

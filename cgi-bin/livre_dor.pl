@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w 
 
-use strict;
+
 require "cgi-lib.pl";
 
 
@@ -38,26 +38,26 @@ print "<body>";
 
 	print "<div class='regroupement'>";
 		print "<form name='forum' method='post' action='ecritureFichier.pl' >";
-			print"<p><h1>Vous voulez nous laisser un message? C'est par ici!</h1><input type='text' style='border:1px solid' name='message'/>";
+			print"<p><h1>Vous voulez nous laisser un message? C'est par ici!<\/h1><input type='text' style='border:1px solid' name='message'\/>";
 			print"<input type='submit' name='Envoyer' value='Envoyer'>";
-		print"</form>";
+		print"<\/form>";
 		print"<div class='message'>";
 		open (FICHIER, "test.txt")  || die ("Un problème est survenu");
 		my @LINES=<FICHIER>;
 		foreach my $line (@LINES)
 		{
 			chomp($line);
-			print "<p>$line\n</p>";
+			print "<p>$line\n<\/p>";
 		}	
 		close (FICHIER);
 		print "<\/div>";
 	print "<\/div>";
 	print "<footer>";
 		print "<p>";
-			print"Faculté des sciences et techniques<br>";
+			print	"Faculté des sciences et techniques<br>";
 			print "87000 LIMOGES Cedex";
-		print "</p>";
-	print "</footer>";
+		print "<\/p>";
+	print "<\/footer>";
 print "<\/body>";
 print "<\/html>";
  
