@@ -16,7 +16,7 @@ a:visited
 	color: white;
 }
 
-.regroupement
+.lienSites
 {
 	margin: 0 auto;
 	margin-top: 10em;
@@ -27,7 +27,7 @@ a:visited
 	flex-wrap: wrap;
 }
 
-.regroupement a
+.lienSites a
 {
 	height: 300px;
 	margin-bottom: 2em;
@@ -75,7 +75,7 @@ a:visited
 }
 
 
-div 
+.boite
 {
 	display: flex;
 	flex-direction: row;
