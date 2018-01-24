@@ -218,3 +218,8 @@ span
 	animation-play-state: paused;
 	animation-delay: inherit;
 }
+
+#camembert1, #camembert2, #camembert3
+{
+	opacity: 0;
+}
