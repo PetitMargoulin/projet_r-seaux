@@ -2,7 +2,7 @@
 require "cgi-lib.pl";
 ReadParse();
 $a = $in{"message"};
-open(FIC, '>>test.txt') || die 'problème d\'ouverture...';
+open(FIC, '>>../livre_dor.txt') || die 'problème d\'ouverture...';
 print FIC "$a\n";
 close(FIC);
 

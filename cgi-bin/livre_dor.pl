@@ -42,7 +42,7 @@ print "<body>";
 			print"<input type='submit' name='Envoyer' value='Envoyer'>";
 		print"<\/form>";
 		print"<div class='message'>";
-		open (FICHIER, "test.txt")  || die ("Un probl?e est survenu");
+		open (FICHIER, "../livre_dor.txt")  || die ("Un probl?e est survenu");
 		my @LINES=<FICHIER>;
 		foreach my $line (@LINES)
 		{
