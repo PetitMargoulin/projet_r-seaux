@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="style_haut_de_la_page.css"/>
 		<link rel="stylesheet" href="style_Article.css" />
 		<link href="images/icone.png" rel="shortcut icon" type="image/png" />
-		<title>La réalitée virtuelle</title>
+		<title>La réalité virtuelle</title>
 	</head>
 	
 <body>
@@ -28,7 +28,7 @@
 	
 
 
-	<h1 id="titreDeLarticle">La réalitée virtuelle</h1>
+	<h1 id="titreDeLarticle">La réalité virtuelle</h1>
 	
 	<div class="article">
 		
@@ -39,7 +39,7 @@
 				Le but est d'immerger totalement l'utilisateur dans un monde en 3D. Pour que l'immersion soit totale,
 				Il faut placer l'oeil dans un univers dans lequel il ne pourra pas sortir
 				Prenons l'exemple d'une télévision: il y à une limite bien visible, c'est la bordure de l'écran.
-				Dans le cas de la réalité virtuelle, on cherche à tromper l'oeil et à cacher ses limites	
+				Dans le cas de la réalité virtuelle, on cherche à tromper l'oeil et à cacher ses limites.	
 
 
 			</p>
@@ -49,7 +49,7 @@
 		
 	</div>
 		
-	<h1>Mais comment fait-on cela ?</h1>
+	<h2>Mais comment fait-on cela ?</h2>
 	
 			<div class="article">
 				
@@ -70,14 +70,14 @@
 			</div>
 		
 		
-	<h1>Et les déplacement dans tout ça ?</h1>
+	<h2>Et les déplacements dans tout ça ?</h2>
 	
 			<div class="article">
 				<p class="text">
 			
-					En effet, si on veux une immersion totale il faut que l'image bouge en fonction de notre positionement.
+					En effet, si on veut une immersion totale il faut que l'image bouge en fonction de notre positionement.
 					Quand on tourne la tête, l'image doit changer aussi.
-					Il y à donc des capteurs de mouvements dans l'appareil qui permettent d'orienter l'image à 360 degré
+					Il y a donc des capteurs de mouvements dans l'appareil qui permettent d'orienter l'image à 360 degrés.
 			
 				</p>
 
@@ -86,7 +86,7 @@
 			</div>
 			
 			
-	<h1>Pour aller plus loin</h1>
+	<h2>Pour aller plus loin</h2>
 	
 			<div class="article">
 				<p class="text">
@@ -95,6 +95,168 @@
 				</p>
 			</div>
 			
+		<form> 
+		<fieldset id="popup">
+		
+			<img src="images/icone_100px.png" id="logopopup" alt="logo">
+			
+			<div id="titrepopup">
+				Avez vous aimé cet article ?
+			</div>
+			
+			<div class="contenupopup">
+				<input type="radio" id="Sioui" name="choix" value="oui">
+				<label for="Sioui">Oui</label>
+			</div>
+			
+			<div class="contenupopup">
+				<input type="radio" id="Sinon" name="choix" value="non">
+				<label for="Sinon">Non</label>
+			</div>
+			
+			<div class="envoie">
+				<button type="submit" onClick="choixprop(form3)">Ok</button>
+			</div>
+			
+		</fieldset>
+	</form>	
+
+		<pre id="lelog">
+		</pre>
+
+		
+		
+		<div class="reponseq">
+			<div id="camembert1">
+				<div class="camembert">15%</div>
+				<span>Appréciation</span>
+			</div>
+			<div id="camembert2">
+				<div class="camembert">35%</div>
+				<span>Qualité</span>
+			</div>
+			<div id="camembert3">
+				<div class="camembert">40%</div>
+				<span>Contenu</span>
+			</div>
+			
+		</div>
+		
+
+		
+		<script>
+		
+			var form = document.querySelector("form");
+			var lelog = document.querySelector("#lelog");
+			
+			var compteur = 0; // compteur de questions
+
+		
+			// Quand on clique sur submit 
+			
+			form.addEventListener("submit", function(event)
+			{
+			
+			  var data = new FormData(form);
+			  var sortie = "";
+			  compteur = compteur + 1;
+
+
+			  	var base1 = document.getElementById('camembert1');
+				base1.style.opacity ="1";
+				var base2 = document.getElementById('camembert2');
+				base2.style.opacity ="1";
+				var base3 = document.getElementById('camembert3');
+				base3.style.opacity ="1";
+
+
+			  for (const entry of data)
+			  {
+				sortie = entry[1];
+			  };
+			  
+			 if(sortie=='oui')	// Si la réponse est oui
+			{
+
+				if(compteur==1)
+				{
+					document.getElementById('titrepopup').innerHTML = 'Juger vous que la qualité de l\'article est correct ?';
+					var ajouter1 = document.getElementById('camembert1');
+					ajouter1.innerHTML = ('<div class="camembert">10%</div><span>Appréciation</span>');
+				}
+
+				if(compteur==2)
+				{ 
+					document.getElementById('titrepopup').innerHTML = 'Trouvez vous que le contenu est suffisant ?';
+					var ajouter2 = document.getElementById('camembert2');
+					ajouter2.innerHTML = ('<div class="camembert">25%</div><span>Qualité</span>');
+				}
+					
+				if(compteur==3)
+				{ 
+					var ajouter3 = document.getElementById('camembert3');
+					ajouter3.innerHTML = ('<div class="camembert">30%</div><span>Contenu</span>');
+
+					document.getElementById('popup').innerHTML = '<img src="images/icone_100px.png" id="logopopup" alt="logo"><div id="titrepopup">Merci pour votre visite !</div>';}
+					
+			}
+			else if(sortie=='non')		// Si la réponse est non
+			{
+
+				document.getElementById('popup').innerHTML = '<img src="images/icone_100px.png" id="logopopup" alt="logo"><div id="titrepopup">Merci pour votre visite !</div>';
+
+				if(compteur==1)
+				{
+
+					var ajouter1 = document.getElementById('camembert1');
+					ajouter1.innerHTML = ('<div class="camembert">20%</div><span>Appréciation</span>');
+				}
+
+				if(compteur==2) 
+				{ 
+					var ajouter2 = document.getElementById('camembert2');
+					ajouter2.innerHTML = ('<div class="camembert">40%</div><span>Qualité</span>');
+				}
+
+				if(compteur==3) 
+				{ 
+					var ajouter3 = document.getElementById('camembert3');
+					ajouter3.innerHTML = ('<div class="camembert">45%</div><span>Contenu</span>');
+				}
+
+			}
+
+			  event.preventDefault();  // si l'évenement n'est pas traité, continue en ignorant
+
+
+
+
+			valeurfromage('.camembert').forEach(function(camembert) // fait varier le camembert
+			{
+				var valeur = camembert.textContent;
+				camembert.style.animationDelay = '-' + parseFloat(valeur) + 's';
+			});
+
+
+			  
+			}, false);
+			
+		
+
+			function valeurfromage(selecteur) // récupère la valeur en pourcentage
+			{
+				var elements = document.querySelectorAll(selecteur);
+				return Array.prototype.slice.call(elements);
+			}
+
+			valeurfromage('.camembert').forEach(function(camembert)
+			{
+				var valeur = camembert.textContent;
+				camembert.style.animationDelay = '-' + parseFloat(valeur) + 's';
+			});
+
+
+	</script>
 			
 			
 	<footer>
